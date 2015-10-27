@@ -1,0 +1,26 @@
+﻿<Window x:Class="KinectHandDetectionBug.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:kinectTools="http://schemas.microsoft.com/kinect/2014"
+        Title="MainWindow"
+        Width="525"
+        Height="350"
+        WindowState="Maximized">
+    <kinectTools:KinectRegion x:Name="kinectRegion">
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="2*" />
+                <RowDefinition Height="8*" />
+            </Grid.RowDefinitions>
+            <kinectTools:KinectUserViewer Grid.Row="0" />
+            <ContentControl Grid.Row="1">
+                <Button Content="incremento" Background="#FF2F55A6" BorderThickness="6"  Width="150" Height="50" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="24,83,343,122" Click="Button_Click"/>
+
+            </ContentControl>
+            <TextBox x:Name="dispCont" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Margin="300,99,0,0" Grid.Row="1"/>
+
+
+        </Grid>
+    </kinectTools:KinectRegion>
+</Window>
